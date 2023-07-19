@@ -1,0 +1,11 @@
+div {
+    color: green;
+}
+
+.out .in{
+    color: blue;
+}
+
+.in .out{
+    color: brown;
+}
