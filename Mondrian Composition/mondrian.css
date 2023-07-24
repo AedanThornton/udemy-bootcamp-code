@@ -1,0 +1,46 @@
+html {
+    background-color: slategray;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.container {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 20px 40px 120px 40px 60px 30px 40px;
+    grid-template-rows: 90px 100px 50px 50px;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.white {
+    background-color: white;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.wide {
+    grid-column: span 2
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+/* shh */
+.purple {
+    background-color: indigo;
+}
