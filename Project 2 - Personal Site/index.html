@@ -9,16 +9,16 @@
 
 <body>
  
-<section id="title">
-    <h1>Hello! Aedan Speaking.</h1>
+<section id="landing">
+    <div class="small-spacer"></div>
+    <h1>Hello!</h1>
+    <h1>Aedan Speaking.</h1>
     <div class="container">
-        <div>
-            <h3>Software Developer, Web Designer, and Video Game Designer and Developer</h3>
-        </div>
-        <div>
-            <img src="" alt="" />
-        </div>
+        <button onmouseover="changeBackgroundColor(true, '#FF0000')" onmouseleave="changeBackgroundColor(false)">Software Developer //</button>
+        <button onmouseover="changeBackgroundColor(true, '#00FF00')" onmouseleave="changeBackgroundColor(false)">Web Developer <></button>
+        <button onmouseover="changeBackgroundColor(true, '#0000FF')" onmouseleave="changeBackgroundColor(false)">Game Designer ??</button>
     </div>
+    <div class="large-spacer"></div>
 </section>
 
 
@@ -97,6 +97,18 @@
     </div>
 
 </section>
+
+<script>
+    var element = document.getElementById("landing");
+    var originalColor = element.style.backgroundColor;
+
+    function changeBackgroundColor(shouldChange, color) {
+        if (!shouldChange) {
+            color = originalColor;
+        }
+        element.style.backgroundColor = color;
+    }
+</script>
 
 </body>
 
