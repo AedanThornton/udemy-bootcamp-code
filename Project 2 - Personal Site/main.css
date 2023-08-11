@@ -16,28 +16,32 @@ OR
 */
 
 :root {
-    --landing: #0F4B94;
-    --summary: #0B6BE0;
-    --skills: #E0BF00;
-    --projects: #630F94;
-    --landing: #920BE0;
+    --dark-blue: #0F4B94;
+    --light-blue: #0B6BE0;
+    --dull-yellow: #E0BF00;
+    --dark-purple: #630F94;
+    --light-purple: #920BE0;
 }
 
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
-    height: 99vh;
+    height: 100vh;
     width: 99vw;
     color: white;
-}
-
-section {
-    height: 99vh;
-    padding: 2rem;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
+}
+
+section {
+    height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    scroll-snap-align: start;
 }
 
 h1 {
@@ -51,7 +55,7 @@ h1 {
 h3 {
     text-align: center;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
 }
 
@@ -63,35 +67,24 @@ h3 {
     flex: 4;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 #landing {
-    background-color: var(--landing);
+    background-color: var(--light-purple);
     display: flex;
     flex-direction: column;
     background-image: url("./images/WebDeveloper-generic.png");
     background-repeat: no-repeat;
     background-position: right;
-}
-
-#summary {
-    background-color: var(--summary);
-}
-
-#skills {
-    background-color: var(--skills);
-}
-
-#projects {
-    background-color: var(--projects);
-}
-
-#contact-footer {
-    background-color: var(--contact);
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: 55rem;
+    padding: 5rem;
+    transition: background-color 1s;
+    max-height: 100vh;
 }
 
 #landing .container {
@@ -102,7 +95,7 @@ h3 {
 }
 
 #landing button {
-    background-color: var(--landing) ;
+    background: none ;
     color: white;
     text-align: center;
     font-weight: 700;
@@ -114,10 +107,74 @@ h3 {
 }
 
 #landing button:hover {
-    background-color: white;
-    color: var(--landing);
+    border: 2px solid white;
 }
 
-#summary > .container > p{
+#summary {
+    background-color: whitesmoke;
+    color: var(--dark-purple);
+}
+
+#summary .container > p{
     width: 33vw;
+}
+
+#skills {
+}
+
+#skills .large-card {
+    background-color: var(--dull-yellow);
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 2rem;
+}
+
+#projects {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    height: fit-content;
+    color: var(--dark-purple);
+}
+
+#projects .container {
+    display: flex;
+    justify-content: space-around;
+    height: 90%;
+    padding-top: 3rem;
+}
+
+.project-card {
+    background-color: var(--dark-purple);
+    color: white;
+    text-align: center;
+    font-size: 1.75rem;
+    max-width: 30%;
+    height: 90vh;
+    flex: 1;
+}
+
+.project-card > p {
+    font-size: 1.5rem;
+}
+
+footer {
+    height: 30vh;
+}
+
+#contact-footer {
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    float: 1;
+}
+
+#contact-footer .container {
+    justify-content: center;
+    flex: 2;
+}
+
+.contact {
+    width: 10rem;
 }
