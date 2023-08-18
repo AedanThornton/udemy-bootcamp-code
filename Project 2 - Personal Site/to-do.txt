@@ -1,7 +1,3 @@
-make skills box smaller
-make project boxes scroll
-add contact icons
-
 landing page buttons should probably do something
 design skills page to be more interesting
 
