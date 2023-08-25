@@ -87,7 +87,7 @@ p {
     background-color: var(--light-purple);
     display: flex;
     flex-direction: column;
-    background-image: url("./images/WebDeveloper-generic.png");
+    background-image: url("../images/WebDeveloper-generic.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 55rem;

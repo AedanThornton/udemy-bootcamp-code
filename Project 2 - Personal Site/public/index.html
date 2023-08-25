@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aedan Thornton</title>
-    <link href="./main.css" rel="stylesheet" />
+    <link href="./styles/main.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -118,17 +118,8 @@
     <p>©Aedan Thornton 2023</p>
 </footer>
 
-<script>
-    var element = document.getElementById("landing");
-    var originalColor = element.style.backgroundColor;
-
-    function changeBackgroundColor(shouldChange, color) {
-        if (!shouldChange) {
-            color = originalColor;
-        }
-        element.style.backgroundColor = color;
-    }
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./scripts/main.js"></script>
 
 </body>
 
