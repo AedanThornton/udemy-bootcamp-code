@@ -1,8 +1,6 @@
 import express from "express";
-import bodyParser from "body-parser";
-import { dirname } from "path";
+import {dirname} from "path";
 import { fileURLToPath } from "url";
-
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
@@ -11,10 +9,15 @@ const port = 3000;
 app.use(express.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
-    //res.sendFile(__dirname + "/public/styles/main.css");
-    res.sendFile(__dirname + "/public/index.html");
+    let today = new Date();
+    let dayVal = today.getDate();
+
+    res.render("index.ejs", {
+        dayType: "a weekday", 
+        advice: "workin' hard"
+    });
 });
 
 app.listen(port, () => {
-    console.log(`Server open on port ${port}`)
+    console.log(`Listening on port ${port}`);
 });
