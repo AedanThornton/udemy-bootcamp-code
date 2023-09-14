@@ -84,7 +84,6 @@ p {
 }
 
 #landing {
-    background-color: var(--light-purple);
     display: flex;
     flex-direction: column;
     background-image: url("../images/WebDeveloper-generic.png");
@@ -110,7 +109,7 @@ p {
     font-weight: 700;
     font-size: 3rem;
     margin: 0;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0);
     border-radius: 5px;
     width: fit-content;
 }
@@ -243,4 +242,24 @@ footer {
 
 .contact img {
     width: 3rem;
+}
+
+.dark-blue {
+    background-color: var(--dark-blue);
+}
+
+.light-blue {
+    background-color: var(--light-blue);
+}
+
+.dull-yellow {
+    background-color: var(--dull-yellow);
+}
+
+.dark-purple {
+    background-color: var(--dark-purple);
+}
+
+.light-purple {
+    background-color: var(--light-purple);
 }
